@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+    width: 100%;
+    max-width: 420px;
+}
+
+h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #1e40af
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8fbff;
+    transition: all 0.25s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+button {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,24 @@
+div {
+    padding: 10px;
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    background-color: brown;
+}
+
+.menu {
+    background-color: darkblue;
+}
+
+
+.content {
+    width: 500px;
+    background-color: aqua;
+}
+.sidebar {
+    flex-grow: 1;
+    background-color: blue;
+}
+

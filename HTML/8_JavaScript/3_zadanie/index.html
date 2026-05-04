@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz + js zadanie</title>
+</head>
+<body>
+    <h2>Malowanie pokoju: 8 zł za m²</h2>
+
+    Wymiary pokoju(m):
+    <br><input type= "number" id="val1" min ="0" autofocus>
+    <input type= "number" id="val2" min ="0" autofocus>
+
+    <div class="checkbox">
+        <input type="checkbox" id="sufit">
+        <label for="sufit">Malować sufit?</label>
+    </div>
+
+    <br><br><button type="submit" onclick="zatwierdz()">Oblicz Koszt</button><br><br>
+    <b>Powierzchnia całkowita: </b><span id="Pow"></span><br><br>
+    <b>Koszt malowania: </b><span id="Koszt"></span><br><br>
+    Potrzebujesz: <b><span id="Ile_Farby"></span></b><br><br>
+    <script>
+        function zatwierdz(){
+            let val1 = document.getElementById("val1").value;
+            console.log(val1);
+            let val2 = document.getElementById("val2").value;
+            console.log(val2);
+            let h = 2.5;
+            let sufit = document.getElementById("sufit").checked;
+
+            let x = 0;
+
+            if (sufit)
+            {
+                x = ((val1*h*2)+(val2*h*2)+(val1*val2)).toFixed(2);
+            } else {
+                x = ((val1*h*2)+(val2*h*2)).toFixed(2);
+            }
+            let y = `${(8*x).toFixed(2)}zł`;
+            let z = `${Math.ceil(x/10)} litrów`;
+
+            document.getElementById('Pow').textContent = x;
+            document.getElementById('Koszt').textContent = y;
+            document.getElementById('Ile_Farby').textContent = z;
+        }
+    </script>
+</body>
+</html>

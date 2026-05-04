@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przeliczanie temperatury</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Fahrenheit -> Celsjusz</h2>
+        <form>
+            Podaj temperaturę w °F:<br>
+            <p id="fahrenheit"></p>
+            <input type="range" min="-40" max="212" id="slider" value="32" oninput="convertTemperature()"><br>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+        function convertTemperature(){
+            let fahrenheitValue = document.getElementById("slider").value;
+            let calsiusValue = (fahrenheitValue - 32) * 5 / 9;
+
+            document.getElementById("result").innerHTML = "Temperatura w °C: " + calsiusValue.toFixed(2);
+            document.getElementById("fahrenheit").innerHTML = fahrenheitValue;
+
+            let r1 = 0;
+            let g1 = 153;
+            let b1 = 255;
+
+            let r2 = 255;
+            let g2 = 51;
+            let b2 = 0;
+
+            let ratio = (+fahrenheitValue + 40)/252;
+
+            let r = +r2*ratio;
+            let g = +g2*ratio+153*(1-ratio);
+            let b = +b1*(1-ratio);
+
+
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze + js</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Podaj imię" autofocus>
+    <button type="submit" onclick="show()">Zatwierdź</button><br><br>
+    Komunikat: <span id="test"></span>
+    <script>
+        function show(){
+            let x = document.getElementById("name").value;
+            console.log(x);
+            document.getElementById('test').textContent = x;
+        }
+    </script>
+</body>
+</html>
